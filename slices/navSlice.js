@@ -27,7 +27,7 @@ export const { setOrigin, setDestination, setTravelTimeInformation } =
 
 // Selectors (getters)
 export const selectOrigin = (state) => state.nav.origin;
-export const selectDestination = (state) => state.navs.destination;
+export const selectDestination = (state) => state.nav.destination;
 export const selectTravelTimeInformation = (state) =>
   state.nav.travelTimeInformation;
 
