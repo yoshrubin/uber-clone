@@ -10,23 +10,33 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+export default App = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
         <SafeAreaProvider>
           <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="MapScreen" component={MapScreen} />
+            <Stack.Screen
+              name="HomeScreen"
+              component={HomeScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="MapScreen"
+              component={MapScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
           </Stack.Navigator>
-          <HomeScreen />
         </SafeAreaProvider>
       </NavigationContainer>
     </Provider>
   );
-}
+};
 
-export default App;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
